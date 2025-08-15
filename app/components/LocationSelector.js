@@ -46,7 +46,7 @@ export default function LocationSelector({ currentCityId, setCurrentCityId, onUp
             </Button>
           </PopoverTrigger>
           <PopoverContent className="w-full p-0 justify-start">
-            <Command className="md:min-w-[720px]">
+            <Command className="md:min-w-[720px]s sm:min-w-[720px]">
               <CommandInput placeholder="Cari lokasi..." className="h-9" />
               <CommandList>
                 <CommandEmpty>Lokasi tidak ditemukan.</CommandEmpty>
