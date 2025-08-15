@@ -48,6 +48,48 @@ export default function Home() {
     return () => clearInterval(id);
   }, []);
 
+useEffect(() => {
+  if (!prayerData) return;
+
+  const checkNotifications = () => {
+    const now = new Date();
+    const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+    Object.entries(prayerConfig).forEach(([key, config]) => {
+      const timeStr = prayerData[key];
+      if (!timeStr || timeStr === "--:--") return;
+
+      const [hh, mm] = timeStr.split(":").map(Number);
+      const prayerMinutes = hh * 60 + mm;
+
+      const diff = prayerMinutes - currentMinutes;
+
+      // Tepat waktu sholat
+      if (diff === 0 && notificationNow) {
+        createToast(
+          "success",
+          `⏰ ${config.name}`,
+          `Sekarang waktu ${config.name}!`
+        );
+      }
+
+      // 10 menit sebelum waktu sholat
+      if (diff === 10 && notification10min) {
+        createToast(
+          "warning",
+          `⚠️ ${config.name} sebentar lagi`,
+          `10 menit lagi menuju waktu ${config.name}`
+        );
+      }
+    });
+  };
+
+  checkNotifications(); // cek awal
+  const id = setInterval(checkNotifications, 60000); // cek tiap 1 menit
+  return () => clearInterval(id);
+}, [prayerData, notificationNow, notification10min]);
+
+
   // next prayer calculation
   const computeNextPrayer = () => {
     if (!prayerData) return { nextName: '-', nextTime: '--:--:--', remainingText: 'Memuat...', countdown:'--:--:--', notificationText:'Notifikasi akan muncul 10 menit sebelum waktu sholat' };
