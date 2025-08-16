@@ -10,6 +10,7 @@ import CurrentPrayerStatus from './components/CurrentPrayerStatus';
 import PrayerGrid from './components/PrayerGrid';
 import usePrayerData from './components/hooks/usePrayerData';
 import { cityNames, prayerConfig, formatTimeWithSeconds } from './components/utils';
+import HijrCalendar from './components/HijriCalendar';
 
 export default function Home() {
   //UI State
@@ -186,7 +187,7 @@ useEffect(() => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <IslamicCalendar hijriDate={hijri.date} hijriMonth={hijri.monthText} />
+          <HijrCalendar/>
           <AdditionalInfo sunrise={(prayerData && prayerData.terbit) ? formatTimeWithSeconds(prayerData.terbit) : '--:--:--'}
                           dhuha={(prayerData && prayerData.dhuha) ? formatTimeWithSeconds(prayerData.dhuha) : '--:--:--'}
                           midnight={(prayerData && prayerData.tengah_malam) ? formatTimeWithSeconds(prayerData.tengah_malam) : '--:--:--'}

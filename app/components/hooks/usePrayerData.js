@@ -23,7 +23,6 @@ export default function usePrayerData({ cityId, createToast, notification10min, 
       const data = await res.json();
       if (data.status !== true) throw new Error('API status false');
       setPrayerData(data.data.jadwal);
-      setHijri({ date: data.data.jadwal.tanggal || '-', monthText: 'Kalender Hijriah' });
       const now = new Date();
       setLastUpdate(now.toLocaleTimeString('id-ID', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' }));
       createToast && createToast('success', '✅ Data Berhasil Dimuat', 'Jadwal sholat telah diperbarui', 3000);
