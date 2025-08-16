@@ -4,13 +4,12 @@ import ToastContainer from './components/ToastContainer';
 import LoadingOverlay from './components/LoadingOverlay';
 import LocationSelector from './components/LocationSelector';
 import NotificationSettings from './components/NotificationSettings';
-import IslamicCalendar from './components/IslamicCalendar';
+import HijrCalendar from './components/HijriCalendar';
 import AdditionalInfo from './components/AdditionalInfo';
 import CurrentPrayerStatus from './components/CurrentPrayerStatus';
 import PrayerGrid from './components/PrayerGrid';
 import usePrayerData from './components/hooks/usePrayerData';
 import { cityNames, prayerConfig, formatTimeWithSeconds } from './components/utils';
-import HijrCalendar from './components/HijriCalendar';
 
 export default function Home() {
   //UI State
