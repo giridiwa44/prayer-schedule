@@ -54,7 +54,7 @@ export default function LocationSelector({ currentCityId, setCurrentCityId, onUp
                   {Object.entries(cityNames).map(([id, name]) => (
                     <CommandItem
                       key={id}
-                      value={id}
+                      value={`${id} ${name}`} 
                       onSelect={(val) => {
                         setCurrentCityId(val === currentCityId ? "" : val);
                         setOpen(false);

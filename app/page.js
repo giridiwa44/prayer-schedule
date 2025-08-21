@@ -48,6 +48,8 @@ export default function Home() {
     return () => clearInterval(id);
   }, []);
 
+// Notifikasi Waktu Sholat
+  
 useEffect(() => {
   if (!prayerData) return;
 
