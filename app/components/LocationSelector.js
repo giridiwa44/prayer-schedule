@@ -55,10 +55,10 @@ export default function LocationSelector({ currentCityId, setCurrentCityId, onUp
                     <CommandItem
                       key={id}
                       value={`${id} ${name}`} 
-                      onSelect={(val) => {
-                        setCurrentCityId(val === currentCityId ? "" : val);
-                        setOpen(false);
-                        onUpdate();
+                      onSelect={() => {
+                      setCurrentCityId(id); // ✅ simpan ID asli
+                      setOpen(false);
+                      onUpdate();
                       }}
                       className={cn(
                         "cursor-pointer",
