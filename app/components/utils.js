@@ -1,19 +1,25 @@
 export const cityNames = {
+    '1101': 'Kab.Lebak, Banten',
+    '1102': 'Kab.Pandeglang,Banten',
+    '1103': 'Kab.Serang, Banten',
     '1104': 'Kab.Tangerang, Banten',
     '1105': 'Kota Cilegon, Banten',
     '1106': 'Kota Serang, Banten',
     '1107': 'Kota Tangerang, Banten',
     '1108': 'Kota Tangerang Selatan, Banten',
+    '1203': 'Kab.Bekasi, Jawa Barat',
+    '1204': 'Bandung, Jawa Barat',
+    '1205': 'Yogyakarta, DIY',
     '1301': 'Jakarta, DKI Jakarta',
     '1273': 'Surabaya, Jawa Timur',
-    '1204': 'Bandung, Jawa Barat',
     '1214': 'Medan, Sumatera Utara',
     '1226': 'Semarang, Jawa Tengah',
     '1271': 'Makassar, Sulawesi Selatan',
     '1219': 'Palembang, Sumatera Selatan',
-    '1205': 'Yogyakarta, DIY',
     '1275': 'Denpasar, Bali',
     '1265': 'Balikpapan, Kalimantan Timur',
+    '1612': 'Kab.Madiun, Jawa Timur',
+    '1633': 'Kota Madiun, Jawa Timur',
 }
 
 export const prayerConfig = {
