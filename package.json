@@ -20,6 +20,7 @@
     "next": "15.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-jss": "^10.10.0",
     "shadcn": "^2.10.0",
     "tailwind-merge": "^3.3.1"
   },
