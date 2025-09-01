@@ -21,8 +21,10 @@ export default function AdditionalInfo({
   const events = [
     { name: "Ramadhan 2025", date: "2025-03-12T00:00:00" },
     { name: "Idul Fitri 2025", date: "2025-04-21T00:00:00" },
-    { name:"Maulid Nabi 2025", date:"2025-09-05T00:00:00"},
+    { name: "Maulid Nabi 2025", date:"2025-09-05T00:00:00"},
     { name: "Tahun Baru 2026", date: "2026-01-01T00:00:00" },
+    { name: "Ramadhan 2026", date: "2026-02-08T00:00:00" },
+    { name: "Idul Fitri 2026", date: "2026-03-19T00:00:00" },
   ];
 
   // Cari event terdekat dari sekarang
