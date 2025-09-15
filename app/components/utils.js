@@ -23,7 +23,7 @@ export const cityNames = {
 }
 
 export const prayerConfig = {
-    imsak: { name: 'Imsak', desc: 'Sahur', color: 'green', icon: '🌙' },
+    // imsak: { name: 'Imsak', desc: 'Sahur', color: 'green', icon: '🌙' },
     subuh: { name: 'Subuh', desc: 'Fajar', color: 'red', icon: '🌅' },
     dzuhur: { name: 'Dzuhur', desc: 'Tengah Hari', color: 'yellow', icon: '☀️' },
     ashar: { name: 'Ashar', desc: 'Sore', color: 'orange', icon: '🌇' },
